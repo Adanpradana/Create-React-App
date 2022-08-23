@@ -1,29 +1,30 @@
 import "./Welcome.css";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="navwrapper">
       <ul className="navigation">
-        <li class="nav">
+        <li className="nav">
           <Link to={"/"} className="navlink">
             HOME BROK
           </Link>
         </li>
-        <li class="nav">
+        <li className="nav">
           <Link to={"/about"} className="navlink">
             ABOUT BROK
           </Link>
         </li>
-        <li class="nav">
+        <li className="nav">
           <Link to={"/profile"} className="navlink">
             PROFILE
           </Link>
         </li>
-        <li class="nav">
+        <li className="nav">
           <Link to={"/profile/person"} className="navlink">
             PERSON
           </Link>
+          <Outlet />
         </li>
       </ul>
     </div>
