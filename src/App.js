@@ -8,6 +8,9 @@ import Person from "./routes/Person.route";
 import Profile from "./routes/Profile.route";
 import Blog from "./routes/Blog.components";
 import Blogdetail from "./routes/Blog-Detail";
+import NotFound from "./routes/no-routes";
+import Login from "./routes/Login";
+import Dashboard from "./routes/Dashboard";
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
         <Route path="profile/person" element={<Person />} />
         <Route path="blog" element={<Blog />} />
         <Route path="blog/:slug" element={<Blogdetail />} />
+        <Route path="login" element={<Login />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
